@@ -1,20 +1,22 @@
-# Centro Esportivo HB — Escolinha de Futebol
+# Centro Esportivo HB — Prévia visual
 
-Estrutura do site e painel administrativo da escolinha.
-
-## Etapas do envio
-
-O código, as páginas, os estilos, as configurações e as migrações do banco estão incluídos. As imagens e o vídeo serão adicionados posteriormente à pasta `public/`, preservando os caminhos usados pelo código.
+Estrutura demonstrativa do site e do painel, usando Next.js com exportação estática para a Vercel. Sem login, banco de dados ou envio de formulários.
 
 ## Executar
 
-Requer Node.js 22.13 ou superior.
+Node.js 22 e npm.
 
 ```sh
-npm run install:ci
+npm ci
 npm run dev
 ```
 
-## Hospedagem
+## Compilar
 
-O projeto utiliza Vinext, Cloudflare Workers/D1 e autenticação do ChatGPT Sites. O banco de produção e as credenciais não são incluídos. Uma publicação em outro provedor, como a Vercel, exige adaptar o banco e a autenticação.
+```sh
+npm run build
+```
+
+O resultado estático é gerado em `out/`. As configurações da Vercel estão em `vercel.json`. O formulário apenas demonstra a interface e informa que nada foi enviado ou salvo. O painel mostra o estado vazio demonstrativo.
+
+As imagens e o vídeo podem ser enviados em outra etapa, mantendo os caminhos `public/images/` e `public/videos/`. Os arquivos de banco e ferramentas da versão original ficam como referência e não são usados nesta prévia.
